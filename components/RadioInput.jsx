@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function RadioInput({value,name,setInputDatas}) {
+export default function RadioInput({ value, name, setInputDatas }) {
   return (
     <div className='Radio Input'>
       <div
@@ -8,11 +8,15 @@ export default function RadioInput({value,name,setInputDatas}) {
           marginBottom: 10,
         }}
       >
-        <input type='radio' id='income' value='income' name={name} onChange={(e)=>{
-      
-      setInputDatas((prev)=>({...prev,type:e.target.value}))
-
-        }}/>
+        <input
+          type='radio'
+          id='income'
+          value='income'
+          name={name}
+          onChange={(e) => {
+            setInputDatas((prev) => ({ ...prev, type: e.target.value }));
+          }}
+        />
         <label
           htmlFor='income'
           style={{
@@ -24,9 +28,15 @@ export default function RadioInput({value,name,setInputDatas}) {
         </label>
       </div>
       <div>
-        <input type='radio' name={name} id='expense' value='expense' onChange={(e)=>{
-          setInputDatas((prev)=>({...prev,type:e.target.value}))
-        }} />
+        <input
+          type='radio'
+          name={name}
+          id='expense'
+          value='expense'
+          onChange={(e) => {
+            setInputDatas((prev) => ({ ...prev, type: e.target.value }));
+          }}
+        />
         <label
           htmlFor='expense'
           style={{

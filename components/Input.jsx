@@ -6,7 +6,6 @@ export default function Input({title,name,type,placeholder,value,setInputDatas})
       <label htmlFor={title}>{title}</label>
       <input type={type} id={title} name={name} placeholder={placeholder} value={value}
       onChange={(e)=>{
-
         setInputDatas((prev)=>({...prev , [name] : e.target.value}))
       }}
       />

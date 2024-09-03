@@ -10,10 +10,6 @@ import {
 
 export default function MainPage() {
 
-  // Transection state
-  const [transections,setTransections] = useState([
-    
-  ])
   
 
   return (
