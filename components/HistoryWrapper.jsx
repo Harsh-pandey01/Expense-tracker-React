@@ -1,32 +1,24 @@
 import React from "react";
 
-export default function HistoryWrapper() {
+export default function HistoryWrapper({ transections }) {
   return (
     <div className='history-wrapper'>
       <h2>History</h2>
       <div className='histories-wrapper'>
-        <div className='overflow-wrapper'>
-          <div className='history income'>
-            <p>Tiltle</p>
-            <p>Amount</p>
+        {transections.length === 0 ? (
+          <p>No transection </p>
+        ) : (
+          <div className='overflow-wrapper'>
+            {transections.map((transection) => {
+              return (
+                <div className={`history ${transection.type}`}>
+                  <p>{transection.title}</p>
+                  <p>{transection.amount}</p>
+                </div>
+              )
+            })}
           </div>
-          <div className='history expenese'>
-            <p>Tiltle</p>
-            <p>Amount</p>
-          </div>
-          <div className='history income'>
-            <p>Tiltle</p>
-            <p>Amount</p>
-          </div>
-          <div className='history expenese'>
-            <p>Tiltle</p>
-            <p>Amount</p>
-          </div>
-          <div className='history income'>
-            <p>Tiltle</p>
-            <p>Amount</p>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
